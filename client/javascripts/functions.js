@@ -32,13 +32,13 @@ console.log(bitBatBotOrNot(17));
 let findAllbitBatBotOrNots1 = arr => {
   return arr.map(each => `${each}: ` + bitBatBotOrNot(each));
 };
-findAllbitBatBotOrNots2([9, 10, 28, 30, 34, 105]);
+findAllbitBatBotOrNots1([9, 10, 28, 30, 34, 105]);
 
 //Req4d
 let findAllbitBatBotOrNots2 = arr => {
   let newArr = [];
   for (var i = 0; i < arr.length; i++) {
-    newArr.push(arr[i] + ": " + bitBatBotOrNot(arr));
+    newArr.push(`${arr[i]}: ` + bitBatBotOrNot(arr[i]));
   }
   return newArr;
 };
@@ -56,9 +56,11 @@ findAllbitBatBotOrNots3([9, 10, 28, 30, 34, 105]);
 
 //Req4f
 let findAllbitBatBotOrNots4 = arr => {
-  arr.forEach(bitBatBotOrNot) => {
-    arr[each] + ": " + bitBatBotOrNot(arr[each]);
+  let resultArr = [];
+  arr.forEach(elem => {
+    resultArr.push(`${elem}: ` + bitBatBotOrNot(elem));
   });
+  return resultArr;
 };
 
 findAllbitBatBotOrNots4([9, 10, 28, 30, 34, 105]);
